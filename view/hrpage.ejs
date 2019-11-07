@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SkillerBot | HRpage</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            line-height: 1.7em;
+            color: #999;
+        }
+
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        #sidebar {
+            /* don't forget to add all the previously mentioned styles here too */
+            min-width: 250px;
+            max-width: 250px;
+            min-height: 100vh;
+            background: #7386D5;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+        #sidebar .sidebar-header {
+            padding: 10px;
+            background: #6d7fcc;
+        }
+
+        .sidenav {
+            padding-left: 10px;
+        }
+
+        .sidenav form {
+            margin-bottom: 20px;
+        }
+
+        .container-fluid h4 {
+            margin-left: 500px;
+        }
+
+        .list {
+            margin-left: 300px;
+        }
+
+        #content-area {
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h4>Filters</h4>
+            </div>
+            <div class="sidenav">
+                <h4>Roles</h4>
+                <form action="">
+                    <input type="radio" name="front end developer" value="front end developer"> Front end developer
+                    <br>
+                    <input type="radio" name="back end developer" value="back end developer"> Back end developer
+                    <br>
+                    <input type="radio" name="full stack developer" value="full stack developer"> Full stack developer
+                    <br>
+                    <input type="radio" name="software developer" value="software developer"> Software developer
+                    <br>
+                </form>
+                <h4>Experience</h4>
+                <form action="">
+                    <input type="radio" name="experience" value=""> 0-1 year
+                    <br>
+                    <input type="radio" name="experience" value="2"> 2 years
+                    <br>
+                    <input type="radio" name="experience" value="3"> 3 years
+                    <br>
+                    <input type="radio" name="experience" value="4"> 4 years
+                    <br>
+                    <input type="radio" name="experience" value=""> Other
+                    <br>
+                </form>
+
+            </div>
+        </nav>
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <!-- <i class="fas fa-align-left"></i> -->
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h4> HR page </h4>
+                    <button type="button" class="btn list">List</button>
+                    <button type="button" class="btn btn-primary map">Map</button>
+                    
+                </div>
+                <div id="content-area">
+                    </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
